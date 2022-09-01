@@ -1,5 +1,61 @@
-.HELLO-WORLD{
-    color:yellow;
-    background-color:brown;
-
+body{
+    margin: 0;
+    margin-left:52px;
+    margin-right:52px;
+}
+header{
+    height:83px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+#time{
+    margin-left: 36px;
+    color:#b5bfcd;
+    font-size:60px;
+    font-family: Arial;
+    font-weight:bold;
+    
+}
+#weather{
+    width:100px;
+    margin-left: 12px;
+    color:#b5bfcd;
+    font-size:30px;
+    font-family: Arial;
+}
+#time sup{
+    font-size:15px;
+    font-weight: normal;
+    
+}
+#temperature{
+    margin-left: 10px;
+    color:#b5bfcd;
+    font-size:60px;
+    font-family: Arial;
+    font-weight:bold;
+}
+#temperature sup{
+    font-size:15px;
+    font-weight: normal;
+}
+.header-info{
+    display:flex;
+    
+    
+}
+.icon{
+    align-self:center;
+    transition:  background-color 1s;
+    border-radius:20px;
+}
+.icon:hover{
+    background-color:aqua;
+    border-radius:20px;
+   
 }
