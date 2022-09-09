@@ -1,0 +1,411 @@
+body {
+
+    margin-left: 52px;
+    margin-right: 52px;
+    margin-bottom: 52px;
+    font-family: Arial;
+
+}
+
+header {
+    height: 83px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#time {
+    margin-left: 36px;
+    color: #b5bfcd;
+    font-size: 60px;
+    font-weight: bold;
+
+}
+
+#weather {
+    width: 100px;
+    margin-left: 12px;
+    color: #b5bfcd;
+    font-size: 30px;
+}
+
+#time sup {
+    font-size: 15px;
+    font-weight: normal;
+
+}
+
+#temperature {
+    margin-left: 10px;
+    color: #b5bfcd;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#temperature sup {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.header-info {
+    display: flex;
+
+
+}
+
+.icon {
+    align-self: center;
+    transition: background-color 1s;
+    border-radius: 5px;
+}
+
+.icon:hover {
+    background-color: aqua;
+    border-radius: 5px;
+
+}
+
+.main-page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+.usage {
+    box-shadow: 5px 5px 5px 0.8px rgba(12, 113, 156, 0.1);
+    padding-right: 30px;
+}
+
+.electric-usage {
+    background-color: pink;
+
+}
+
+.header-usage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.type-of-usage {
+    color: #53c6ea;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.type-of-usage {
+    margin-left: 13px;
+}
+
+.day-of-usage {
+    margin: 0;
+}
+
+.but-time {
+    width: 104px;
+    height: 36px;
+    color: #b5bfcd;
+    border: solid;
+    border-color: #53c6ea;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-width: 1px;
+}
+
+.usage-info {
+    display: flex;
+    justify-content: space-between;
+    color: #b5bfcd;
+    font-size: 18px;
+    margin-left: 45px;
+
+}
+
+.Radio-1 {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 15px;
+
+}
+
+.Radio-2 {
+    margin-left: 20px;
+}
+
+.lit {
+    margin-left: 14px;
+}
+
+.usage-price {
+    vertical-align: middle;
+    color: #b5bfcd;
+    padding-top: 40px;
+
+}
+
+.month-usg {
+    margin-top: 20px;
+}
+
+.Month-usage {
+    margin-left: 15px;
+}
+
+.account-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    margin-top: 20px;
+
+}
+
+.info-section {
+    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 5px 0.5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Word-Mes {
+    color: #53c6ea;
+    font-size: 15px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.message-info {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #b5bfcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 5px 5px 5px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.mes-info {
+    color: #9aa4b3;
+
+}
+
+.date-mes {
+    margin: 0;
+}
+
+.quarter {
+    color: #9aa4b3;
+    font-weight: bold;
+
+}
+
+.tariff-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0px;
+    row-gap: 40px;
+
+
+}
+
+.tariff-section {
+    border: solid;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-color: #9aa4b3;
+    border-width: 1px;
+}
+
+.total-price {
+    font-size: 40px;
+    color: #9aa4b3;
+    font-weight: bold;
+}
+
+.increase-tariff {
+    margin: 0;
+    color: #53c6ea;
+
+}
+
+.tariff-section-02 {
+    border-right: 0;
+}
+
+.range-season {
+    border-radius: 15px;
+    width: 135px;
+    height: 5px;
+    -webkit-appearance: none;
+    background-color: #62cee1;
+}
+
+.range-season::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: #9aa4b3;
+}
+
+.settings-slider {
+    border-radius: 15px;
+    width: 120px;
+    height: 5px;
+    -webkit-appearance: none;
+    background-color: #62cee1;
+}
+
+.settings-slider::-webkit-slider-thumb {
+    width: 20px;
+    -webkit-appearance: none;
+    height: 20px;
+    cursor: ew-resize;
+    background: white;
+    border-radius: 10px;
+    border: solid;
+    border-width: 4px;
+    border-color: rgba(228, 247, 244, 0.8);
+    opacity: 0.9;
+}
+
+.settings-cell {
+    color: rgb(119, 133, 153);
+    font-size: 15px;
+    font-weight: bold;
+
+    padding-top: 22px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.but-currency {
+    width: 100px;
+    height: 30px;
+    color: #b5bfcd;
+    border: solid;
+    border-color: #53c6ea;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+    cursor: pointer;
+    margin-left: 90px;
+    border-width: 1px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.switch {
+    margin-left: 100px;
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 2px;
+    bottom: 0px;
+    top: 3px;
+
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.usage-charts {
+    align-items: center;
+    text-align: center;
+    margin-left: 25px;
+}
+
+.tariff-info-2 {
+    color: #9aa4b3;
+    font-size: 14px;
+    text-align: center;
+}
+
+#doughnut {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
