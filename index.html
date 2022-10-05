@@ -7,7 +7,8 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="index.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header> 
@@ -20,7 +21,7 @@
             </span>
               <span id="time">1:21<Sup>PM</Sup></span>
               
-              <span id="weather" ><strong>Sun</strong> Mar 13</span>
+              <span id="weather" ><strong>Sun</strong > Mar 13</span>
             </div>
            
         </div>
@@ -67,7 +68,7 @@
             </div>
           </div>
           <div class="usage-charts">
-            <div id="chartContainer" style="height: 240px; width: 100%;"></div>
+            <canvas id="myChart_1"></canvas>
           </div>
         </div>
         <div class="usage">
@@ -103,7 +104,7 @@
             </div>
           </div>
           <div class="usage-charts">
-            <div id="chartContainer_2" style="height: 240px; width: 100%;"></div>
+            <canvas id="myChart_2"></canvas>
           </div>
         </div>
         </div>
@@ -172,8 +173,9 @@
               <p class="month"><span>Apr 1 </span> <span>Mar 31</span></p>
               <input type="range" class="range-season">
             </div>
+            
             <div class="tariff-section tariff-section-02">
-              <div id="doughnut" style="height: 80%; width: 80%;"></div>
+              <div style="height:85%;width:90%;padding-left:14px" ><canvas id="myChart_3"></canvas><span style="position:relative;bottom:81px;left:50px;font-size:30px;color: #9aa4b3; font-weight:bold;">76</span></div>
               <div class="tariff-info-2">Until End of March</div>
             </div>
           </div>
@@ -219,5 +221,6 @@
    <div>
    
   </div>
+  
 </body>
 </html>
