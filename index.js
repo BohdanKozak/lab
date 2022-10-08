@@ -1,5 +1,13 @@
 window.onload = function () {
-
+	var request = new XMLHttpRequest();
+	request.onreadystatechange = function (){
+	if(this.readyState == 4 && this.status == 200){
+		document.getElementById("num_of_pointer").innerHTML = this.responseText;
+		
+		}
+	}
+	request.open("GET", "data.json", true);
+	request.send();
 	const labels = ['Ja', 'Fe', 'Ma', 'Ap', 'Ma', 'Ju', 'Ji', 'Au', 'Se', 'Oc', 'No', 'De'];
 
 	var data = {
@@ -216,7 +224,7 @@ setInterval(function() {
 	sec = sec < 10 ? "0" + sec : sec;
 	let currentTime = hour + ":"
 			+ min + ":" + sec + " " + am_pm;
-
+	
 	document.getElementById("time")
 			.innerHTML = currentTime;
 }, 1000)};
@@ -227,36 +235,32 @@ setInterval(function() {
 	let month2;
 	month = month < 10 ? "0" + month : month;
 	day = day < 10 ? "0" + day : day;
-	if (month === "1") {
+	if (month === 1) {
 		month2 = "Jan"
-	} else if (month === "2") {
+	} else if (month === 2) {
 		month2 = "Feb"
-	} else if (month === "3") {
+	} else if (month === 3) {
 		month2 = "Mar"
-	} else if (month === "4") {
+	} else if (month === 4) {
 		month2 = "Apr"
-	} else if (month === "5") {
+	} else if (month === 5) {
 		month = "May"
-	}else if (month === "6") {
+	}else if (month === 6) {
 		month2 = "Jun"
-	}else if (month === "7") {
+	}else if (month === 7) {
 		month2 = "Jul"
-	}else if (month === "8") {
+	}else if (month === 8) {
 		month2 = "Aug"
-	}else if (month === "09") {
+	}else if (month === 9) {
 		month2 = "Sep"
 	}else if (month === 10) {
 		month2 = "Oct"
-	}else if (month === "11") {
+	}else if (month === 11) {
 		month2 = "Nov"
-	}else if (month === "12") {
+	}else if (month === 12) {
 		month2 = "Dec"
 	}
 	document.getElementById("weather").innerHTML =  month2 + " " +day;
 }, 1000)
-var linear = new LinearGauge({ renderTo: 'linear-gauge-id' });
-var radial = new RadialGauge({
-    renderTo: document.createElement('canvas')
-});
 
-Gauge.appendChild(gauge.options.renderTo);
+
