@@ -37,6 +37,7 @@ window.onload = function () {
 		type: 'line',
 		data: data,
 		options: {
+			responsive: true,
 			plugins: {
 				legend: {
 					display: false
@@ -84,6 +85,7 @@ window.onload = function () {
 	};
 	const config_2 = {
 		type: 'line',
+		responsive: true,
 		data: data_2,
 		options: {
 			plugins: {
@@ -114,14 +116,17 @@ window.onload = function () {
 		datasets: [
 			{
 				data: [76, 289],
+				cutout: 50,
+				
+				responsive: true,
 				backgroundColor: [
-					"#2196F3",
+					"rgb(89, 199, 255)",
 					"#b5bfcd",
                             
 				],
 				hoverBackgroundColor: [
-					"#2196F3",
-						"#b5bfcd",
+					"rgb(89, 199, 255)",
+					"#b5bfcd",
                             
 				]
 			}]
@@ -130,7 +135,8 @@ window.onload = function () {
 		type: 'doughnut',
 		data: data_5,
 		options: {
-			responsive: true,
+			
+			
 			plugins: {
 				legend: {
 					display: false,
@@ -145,6 +151,50 @@ window.onload = function () {
 	const myChart_4 = new Chart(
 		document.getElementById('myChart_3'),
 		config_4)
+	
+	var data_6 = {
+		datasets: [
+			{
+				data: [155,500],
+				circumference: Math.PI * 100,
+				rotation: Math.PI * -50,
+				cutout: 70,
+				responsive: true,
+				backgroundColor: [
+					"rgb(89, 199, 255)",
+					"#b5bfcd",
+                            
+				],
+				hoverBackgroundColor: [
+					"rgb(89, 199, 255)",
+					"#b5bfcd",
+                            
+				]
+			}]
+	};
+	const config_5 = {
+		type: 'doughnut',
+		data: data_6,
+		options: {
+			
+			
+			plugins: {
+				legend: {
+					display: false,
+				},
+				title: {
+					display: false,
+					
+				}
+			}
+		},
+	};
+		const myChart_5 = new Chart(
+		document.getElementById('gauge'),
+		config_5)
+	
+	
+	
 setInterval(function() {
 	let today = new Date();
 	let hour = today.getHours();
@@ -195,7 +245,7 @@ setInterval(function() {
 		month2 = "Aug"
 	}else if (month === "09") {
 		month2 = "Sep"
-;	}else if (month === "10") {
+	}else if (month === 10) {
 		month2 = "Oct"
 	}else if (month === "11") {
 		month2 = "Nov"
@@ -204,5 +254,9 @@ setInterval(function() {
 	}
 	document.getElementById("weather").innerHTML =  month2 + " " +day;
 }, 1000)
+var linear = new LinearGauge({ renderTo: 'linear-gauge-id' });
+var radial = new RadialGauge({
+    renderTo: document.createElement('canvas')
+});
 
-	
+Gauge.appendChild(gauge.options.renderTo);

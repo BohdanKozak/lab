@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.0",
+    "canvas-gauges": "^2.1.7-linear",
     "chart.js": "^3.9.1",
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "jquery": "^3.6.1"
   },
   "name": "05_23",
   "version": "1.0.0",
