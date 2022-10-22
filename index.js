@@ -1,66 +1,78 @@
 window.onload = function () {
+	var data_Lucik;
+	var state;
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function (){
 	if(this.readyState == 4 && this.status == 200){
-		document.getElementById("num_of_pointer").innerHTML = this.responseText;
-		
-		}
-	}
-	request.open("GET", "data.json", true);
-	request.send();
-	const labels = ['Ja', 'Fe', 'Ma', 'Ap', 'Ma', 'Ju', 'Ji', 'Au', 'Se', 'Oc', 'No', 'De'];
-
-	var data = {
-		labels: labels,
-		datasets: [{
-			backgroundColor: 'rgba(89,199,255,0.2)',
-			borderColor: 'rgb(89, 199, 255)',
-			data: [100, 110, 220, 250, 210, 215, 270, 290, 270, 190, 220, 100],
-			pointRadius: 0,
-			fill: 1,
+		document.getElementById("num_of_pointer").innerHTML = JSON.parse(this.responseText).data_balance;
+		document.getElementById("num_of_days2").innerHTML = JSON.parse(this.responseText).data_days;
+		data_Lucik = JSON.parse(this.responseText).data_charts.map((item) => parseInt(item, 10));
+			var data = {
+			labels: labels,
+			datasets: [{
+				backgroundColor: 'rgba(89,199,255,0.2)',
+				borderColor: 'rgb(89, 199, 255)',
+				data: data_Lucik,
+				pointRadius: 0,
+				fill: 1,
                 
-		}, {
-			backgroundColor: 'rgb(225, 225, 225)',
-			borderColor: 'rgb(225, 225, 225)',
-			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-			pointRadius: 0,
+			}, {
+				backgroundColor: 'rgb(225, 225, 225)',
+				borderColor: 'rgb(225, 225, 225)',
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				pointRadius: 0,
 
-		}, {
-			backgroundColor: 'rgba(42,164,137,0.2)',
-			borderColor: 'rgb(42, 164, 137)',
-			data: [110, 170, 220, 300, 250, 260, 280, 275, 270, 250, 190, 110],
-			pointRadius: 0,
-			fill: 1,
+			}, {
+				backgroundColor: 'rgba(42,164,137,0.2)',
+				borderColor: 'rgb(42, 164, 137)',
+				data: [110, 170, 220, 300, 250, 260, 280, 275, 300, 250, 190, 110],
+				pointRadius: 0,
+				fill: 1,
 
-		}, {
-			backgroundColor: 'rgb(225, 225, 225)',
-			borderColor: 'rgb(225, 225, 225)',
-			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-			pointRadius: 0,
+			}, {
+				backgroundColor: 'rgb(225, 225, 225)',
+				borderColor: 'rgb(225, 225, 225)',
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+				pointRadius: 0,
 
-		}]
-	};
+			}]
+		};
 
-	var config_1 = {
-		type: 'line',
-		data: data,
-		options: {
-			responsive: true,
-			plugins: {
-				legend: {
-					display: false
+		var config_1 = {
+			type: 'line',
+			data: data,
+			options: {
+				responsive: true,
+				plugins: {
+					legend: {
+						display: false
+					}
+				},
+				scales: {
+					y: {
+						max: 500,
+						min: 0,
+						grace: '5%'
+					}
 				}
 			},
-			scales: {
-				y: {
-					max: 500,
-					min: 0,
-					grace: '5%'
-				}
-			}
-		},
              
-	};
+		}
+		const myChart = new Chart(
+		document.getElementById('myChart_1'),
+		config_1
+	);
+		}
+	}
+	
+	request.open("GET", "data.json", true);
+	request.send();
+
+
+	const labels = ['Ja', 'Fe', 'Ma', 'Ap', 'Ma', 'Ju', 'Ji', 'Au', 'Se', 'Oc', 'No', 'De'];
+	
+	
+
 	const data_2 = {
 		labels: labels,
 		datasets: [{
@@ -111,10 +123,7 @@ window.onload = function () {
 		},
              
 	};
-	const myChart = new Chart(
-		document.getElementById('myChart_1'),
-		config_1
-	);
+	
 	const myChart_2 = new Chart(
 		document.getElementById('myChart_2'),
 		config_2
